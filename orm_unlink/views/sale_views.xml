@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+  <data>
+    <record id="view_order_form_orm_demo" model="ir.ui.view">
+      <field name="name">sale.order.form.orm.unlink.demo</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_order_form"/>
+      <field name="arch" type="xml">
+        <header position="inside">
+        <!-- Los dominios sirven para ocultar o mostrar elementos usando cosas como los estados o ids -->
+          <button string="Drop Lines" 
+                  class="oe_highlight"
+                  name="drop_lines" 
+                  type="object" 
+                  attrs="{'invisible': [('state','not in',['draft'])]}"/>
+
+          <button string="Test Request" 
+                  class="oe_highlight"
+                  name="test_request" 
+                  type="object" 
+                  />
+        </header>
+      </field>
+    </record>
+  </data>
+</odoo>
