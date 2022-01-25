@@ -17,9 +17,9 @@ const item = {
       body: JSON.stringify(item),
     };
 
-     const url = 'http://192.168.0.116:12376/orders/items/'
+     const url_to_service = 'http://192.168.0.116:12376/orders/items/'
 
-    fetch(url, options)
+    fetch(url_to_service, options)
     .then(data => {
         if (!data.ok) {
           throw Error(data.status);
