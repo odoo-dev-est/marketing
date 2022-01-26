@@ -17,7 +17,8 @@ const item = {
       body: JSON.stringify(item),
     };
 
-     const url_to_service = 'http://192.168.0.116:12376/orders/items/'
+     //const url_to_service = 'http://192.168.0.116:12376/orders/items/'
+    const url_to_service = 'http://127.0.0.1:12376/orders/items/'
 
     fetch(url_to_service, options)
     .then(data => {
