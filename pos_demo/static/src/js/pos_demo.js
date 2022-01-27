@@ -1,7 +1,7 @@
 console.log('Point of Sale JavaScript loaded! This is a greeting!');
 // fetch('http://127.0.0.1:5000/products').then(data=> data.json()).then(response => console.log(response));
 
-const bill_to_print = {
+/* const bill_to_print = {
 	"client": {
 		"ID": "00.000.000",
 		"bussinessName": "Jesus Briceno",
@@ -61,6 +61,20 @@ const bill_to_print = {
 	
 	"barCode": 123456789012
 };
+    
+    const url_to_service = 'http://127.0.0.1:12376/orders/post_invoice/' */
+
+
+    const report_z ={
+      "perDate" : false,
+      "perNumber" : false,
+      "startDate" : "2022-01-15",
+      "endDate" : "2022-01-25",
+      "startNumber" : "0",
+       "endNumber" : "2",
+       "mode": "S"
+    };
+
 
     const options = {
       method: 'POST',
@@ -68,10 +82,11 @@ const bill_to_print = {
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(bill_to_print),
+      body: JSON.stringify(report_z),
     };
 
-     const url_to_service = 'http://127.0.0.1:12376/orders/post_invoice/'
+    
+    const url_to_service = 'http://127.0.01:12376/orders/print_Z_report/'
 
     fetch(url_to_service, options)
     .then(data => {
@@ -81,10 +96,10 @@ const bill_to_print = {
 
         return data.json();
 
-          }).then(bill_to_print => {
-            console.log(bill_to_print);
+          }).then(report_z => {
+            console.log(report_z);
             // {
             // };
           }).catch(e => {
             console.log(e);
-          });
+          }); 
