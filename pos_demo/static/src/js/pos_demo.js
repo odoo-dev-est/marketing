@@ -4,11 +4,11 @@ console.log('Point of Sale JavaScript loaded! This is a greeting!');
 const bill_to_print = {
 	"client": {
 		"ID": "00.000.000",
-		"bussinessName": "Name Lastname",
-		"additionalInfo": "Addtional Info"
+		"bussinessName": "Jesus Briceno",
+		"additionalInfo": "Odoo Developer"
 	},
 
-	"invoiceComment": "This a comment",
+	"invoiceComment": "This a comment BLA BLA BLA",
 
 	"products": [{
 			"tax": 1,
